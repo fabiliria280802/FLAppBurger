@@ -1,11 +1,16 @@
-﻿namespace FLAppBurger;
+﻿using FLAppBurger.Data;
+
+namespace FLAppBurger;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public static FLBurgerDatabase FLBurgerRepo { get; private set; }
+    public App(FLBurgerDatabase repo)
+    {
+        InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        MainPage = new AppShell();
+        FLBurgerRepo = repo;
+    }
 }
+
