@@ -8,7 +8,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local: local:FLBurgerItemPage }"
+        ContentTemplate="{DataTemplate local:FLBurgerItemPage }"
         Route="MainPage" />
 
 </Shell>
