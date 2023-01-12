@@ -2,7 +2,7 @@
 
 namespace FLAppBurger.Models
 {
-    [Table("burger")]
+    [Table("flburger")]
     public class FLBurger
     {
         [PrimaryKey, AutoIncrement]

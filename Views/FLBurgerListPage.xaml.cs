@@ -5,8 +5,8 @@ public partial class FLBurgerListPage : ContentPage
     public FLBurgerListPage()
     {
         InitializeComponent();
-        List<FLBurger> burger = App.FLBurgerRepo.GetAllBurgers();
-        burgerList.ItemsSource = burger;
+        List<FLBurger> flburger = App.FLBurgerRepo.GetAllBurgers();
+        burgerList.ItemsSource = flburger;
     }
     async void OnItemAdded(object sender, EventArgs e)
     {

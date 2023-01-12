@@ -1,6 +1,7 @@
-namespace FLAppBurger.Views;
 using FLAppBurger.Data;
 using FLAppBurger.Models;
+
+namespace FLAppBurger.Views;
 
 public partial class FLBurgerItemPage : ContentPage
 {

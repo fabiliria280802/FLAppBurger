@@ -17,10 +17,10 @@ namespace FLAppBurger.Data
             conn = new SQLiteConnection(_dbPath);
             conn.CreateTable<FLBurger>();
         }
-        public int AddNewBurger(FLBurger burger)
+        public int AddNewBurger(FLBurger flburger)
         {
             Init();
-            int result = conn.Insert(burger);
+            int result = conn.Insert(flburger);
             return result;
         }
         public List<FLBurger> GetAllBurgers()
