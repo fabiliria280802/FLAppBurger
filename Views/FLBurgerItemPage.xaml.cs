@@ -10,6 +10,7 @@ public partial class FLBurgerItemPage : ContentPage
     public FLBurgerItemPage()
     {
         InitializeComponent();
+        BindingContext = Item;
     }
     private void OnSaveClicked(object sender, EventArgs e)
     {
@@ -17,7 +18,8 @@ public partial class FLBurgerItemPage : ContentPage
         Item.Description = descB.Text;
         Item.WithExtraCheese = _flag;
         App.FLBurgerRepo.AddNewBurger(Item);
-        Shell.Current.GoToAsync("///FLBurgerListPage");
+        Shell.Current.GoToAsync("..");
+        MessagingCenter.Send(this, "itemAdded", true);
     }
     private void OnCancelClicked(object sender, EventArgs e)
     {
