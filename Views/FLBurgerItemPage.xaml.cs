@@ -17,14 +17,13 @@ public partial class FLBurgerItemPage : ContentPage
         Item.Description = descB.Text;
         Item.WithExtraCheese = _flag;
         App.FLBurgerRepo.AddNewBurger(Item);
-        Shell.Current.GoToAsync("..");
+        Shell.Current.GoToAsync("///FLBurgerListPage");
     }
     private void OnCancelClicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("..");
     }
-    private void OnCheckBoxCheckedChanged(object sender,
-   CheckedChangedEventArgs e)
+    private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         _flag = e.Value;
     }

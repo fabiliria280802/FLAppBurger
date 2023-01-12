@@ -5,7 +5,7 @@ namespace FLAppBurger.Data
     public class FLBurgerDatabase
     {
         string _dbPath;
-        private SQLiteConnection conn;
+        public SQLiteConnection conn;
         public FLBurgerDatabase(string DatabasePath)
         {
             _dbPath = DatabasePath;
