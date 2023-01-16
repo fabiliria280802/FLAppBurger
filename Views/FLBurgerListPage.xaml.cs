@@ -12,7 +12,7 @@ public partial class FLBurgerListPage : ContentPage
         //MessagingCenter.Subscribe<FLBurgerItemPage>(this, "itemAdded", (sender) => OnUpdate(sender, EventArgs.Empty));
     }
     //async void OnItemAdded(object sender, EventArgs e) ya no es necesario
-    void OnItemAdded(object sender, EventArgs e)
+    public void OnItemAdded(object sender, EventArgs e)
     {
         //await 
         Shell.Current.GoToAsync(nameof(FLBurgerItemPage), true, new Dictionary<string, object> 
@@ -34,7 +34,14 @@ public partial class FLBurgerListPage : ContentPage
         OnUpdate(sender, e);
     }
 
-    private void burgerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        List<FLBurger> newBurgers = App.FLBurgerRepo.GetAllBurgers();
+        burgerList.ItemsSource = newBurgers;
+        //base.OnNavigatedTo(args);
+    }
+
+    private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
 
     }
