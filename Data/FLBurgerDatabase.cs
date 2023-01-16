@@ -20,14 +20,27 @@ namespace FLAppBurger.Data
         public int AddNewBurger(FLBurger flburger)
         {
             Init();
-            int result = conn.Insert(flburger);
-            return result;
+            //int result = conn.Insert(flburger);
+            //return result;
+            if(flburger.Id != 0)
+            {
+                return conn.Update(flburger);
+            }
+            else
+            {
+                return conn.Insert(flburger);
+            }
         }
         public List<FLBurger> GetAllBurgers()
         {
             Init();
             List<FLBurger> burgers = conn.Table<FLBurger>().ToList();
             return burgers;
+        }
+        public int DeleteItem(FLBurger item)
+        {
+            Init();
+            return conn.Delete(item);
         }
     }
 }
