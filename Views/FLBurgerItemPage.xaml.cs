@@ -2,7 +2,7 @@ using FLAppBurger.Data;
 using FLAppBurger.Models;
 
 namespace FLAppBurger.Views;
-
+[QueryProperty("Item", "Item")]
 public partial class FLBurgerItemPage : ContentPage
 {
     //FLBurger Item = new FLBurger();
