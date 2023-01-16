@@ -6,7 +6,7 @@ public partial class FLBurgerListPage : ContentPage
     public FLBurgerListPage()
     {
         InitializeComponent();
-        BindingContext= this;
+        BindingContext = this;
         //List<FLBurger> flburger = App.FLBurgerRepo.GetAllBurgers();
         //burgerList.ItemsSource = flburger;
         //MessagingCenter.Subscribe<FLBurgerItemPage>(this, "itemAdded", (sender) => OnUpdate(sender, EventArgs.Empty));
@@ -15,12 +15,12 @@ public partial class FLBurgerListPage : ContentPage
     public void OnItemAdded(object sender, EventArgs e)
     {
         //await 
-        Shell.Current.GoToAsync(nameof(FLBurgerItemPage), true, new Dictionary<string, object> 
-        { 
+        Shell.Current.GoToAsync(nameof(FLBurgerItemPage), true, new Dictionary<string, object>
+        {
             ["Item"] = new FLBurger()
         });
     }
-
+    //Ya no se usa OnUpdate
     private void OnUpdate(object sender, EventArgs e)
     {
         //fetch new items and update the Burgers property

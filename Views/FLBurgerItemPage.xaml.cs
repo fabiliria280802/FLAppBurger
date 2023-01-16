@@ -5,21 +5,27 @@ namespace FLAppBurger.Views;
 
 public partial class FLBurgerItemPage : ContentPage
 {
-    FLBurger Item = new FLBurger();
-    bool _flag;
+    //FLBurger Item = new FLBurger();
+    //bool _flag;
+
+    public FLBurger Item
+    {
+        get => BindingContext as FLBurger;
+        set => BindingContext = value;
+    }
     public FLBurgerItemPage()
     {
         InitializeComponent();
-        BindingContext = Item;
+        //BindingContext = Item;
     }
     private void OnSaveClicked(object sender, EventArgs e)
     {
-        Item.Name = nameB.Text;
-        Item.Description = descB.Text;
-        Item.WithExtraCheese = _flag;
+        //Item.Name = nameB.Text;
+        //Item.Description = descB.Text;
+        //Item.WithExtraCheese = _flag;
         App.FLBurgerRepo.AddNewBurger(Item);
         Shell.Current.GoToAsync("..");
-        MessagingCenter.Send(this, "itemAdded", true);
+        //MessagingCenter.Send(this, "itemAdded", true);
     }
     private void OnCancelClicked(object sender, EventArgs e)
     {
@@ -27,6 +33,6 @@ public partial class FLBurgerItemPage : ContentPage
     }
     private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
-        _flag = e.Value;
+        // _flag = e.Value;
     }
 }

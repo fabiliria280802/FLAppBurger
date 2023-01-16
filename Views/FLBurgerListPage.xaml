@@ -26,8 +26,10 @@
             Clicked="OnItemAdded"
              Margin="20"/>
         </Grid>
+        <!--
         <Button Text="Actualizar"
             Clicked="OnUpdate"
              Margin="18"/>
+        -->
     </VerticalStackLayout>
 </ContentPage>

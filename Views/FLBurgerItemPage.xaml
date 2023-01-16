@@ -13,8 +13,12 @@
             <Label Text="Descripción" />
             <Entry x:Name="descB" Text="{Binding Description}" />
             <Label Text="¿Con queso extra?" />
+            <!--
+            Ya no se usa el checkbox de esta manera
             <CheckBox x:Name="check"
                 CheckedChanged="OnCheckBoxCheckedChanged" />
+            -->
+            <CheckBox IsChecked="{Binding WithExtraCheese}"/>
             <Button Text="Guardar"
                 Clicked="OnSaveClicked" />
             <Button Text="Cancelar"
