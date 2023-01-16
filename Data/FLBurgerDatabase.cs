@@ -22,7 +22,7 @@ namespace FLAppBurger.Data
             Init();
             //int result = conn.Insert(flburger);
             //return result;
-            if(flburger.Id != 0)
+            if (flburger.Id != 0)
             {
                 return conn.Update(flburger);
             }
@@ -41,6 +41,10 @@ namespace FLAppBurger.Data
         {
             Init();
             return conn.Delete(item);
+        }
+        public FLBurger ShowItem(FLBurger item)
+        {
+            //aqui falta codigo que recorra la lista en busca de  los datos de una determinada hamburgesa
         }
     }
 }

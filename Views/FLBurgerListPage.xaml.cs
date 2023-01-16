@@ -2,7 +2,7 @@ using FLAppBurger.Models;
 namespace FLAppBurger.Views;
 public partial class FLBurgerListPage : ContentPage
 {
-    public event EventHandler AddBurger;
+    //public event EventHandler AddBurger;
     public FLBurgerListPage()
     {
         InitializeComponent();
@@ -14,7 +14,7 @@ public partial class FLBurgerListPage : ContentPage
     //async void OnItemAdded(object sender, EventArgs e) ya no es necesario
     public void OnItemAdded(object sender, EventArgs e)
     {
-        //await 
+        //await Shell.Current.GoToAsync(nameof(FLBurgerItemPage)
         Shell.Current.GoToAsync(nameof(FLBurgerItemPage), true, new Dictionary<string, object>
         {
             ["Item"] = new FLBurger()
@@ -43,6 +43,10 @@ public partial class FLBurgerListPage : ContentPage
 
     private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-
+        //Aqui falta codigo que tome el item seleccionado y lo pase a la pagina FLBurgerItemPage
+        //FLBurger fLBurger = (FLBurger)burgerList.ItemsSource;
+        //App.FLBurgerRepo.
+        //App.FLBurgerRepo.DeleteItem(fLBurger);
+        //Shell.Current.GoToAsync(FLBurgerItemPage);
     }
 }
