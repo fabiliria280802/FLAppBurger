@@ -31,6 +31,11 @@ public partial class FLBurgerItemPage : ContentPage
     {
         Shell.Current.GoToAsync("..");
     }
+    private void OnDeleteClicked(object sender, EventArgs e)
+    {
+        App.FLBurgerRepo.DeleteItem(Item);
+        Shell.Current.GoToAsync("..");
+    }
     private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         // _flag = e.Value;

@@ -23,6 +23,8 @@
                 Clicked="OnSaveClicked" />
             <Button Text="Cancelar"
                 Clicked="OnCancelClicked" />
+            <Button Text="Borrar"
+                Clicked="OnDeleteClicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
