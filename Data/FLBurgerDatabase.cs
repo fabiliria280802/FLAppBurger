@@ -1,5 +1,6 @@
 ﻿using FLAppBurger.Models;
 using SQLite;
+using FLAppBurger.ViewModels;
 namespace FLAppBurger.Data
 {
     public class FLBurgerDatabase
