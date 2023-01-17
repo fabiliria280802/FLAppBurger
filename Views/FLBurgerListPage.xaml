@@ -8,7 +8,7 @@
         <Grid RowDefinitions="*,Auto">
             <CollectionView x:Name="burgerList"
                             SelectionMode="Single"
-                            SelectionChanged="CollectionView_SelectionChanged">
+                            SelectionChanged="OnCollectionViewSelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:FLBurger">
                         <Grid>

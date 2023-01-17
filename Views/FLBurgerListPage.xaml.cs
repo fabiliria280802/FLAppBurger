@@ -1,3 +1,4 @@
+using FLAppBurger.Data;
 using FLAppBurger.Models;
 namespace FLAppBurger.Views;
 public partial class FLBurgerListPage : ContentPage
@@ -41,12 +42,18 @@ public partial class FLBurgerListPage : ContentPage
         //base.OnNavigatedTo(args);
     }
 
-    private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         //Aqui falta codigo que tome el item seleccionado y lo pase a la pagina FLBurgerItemPage
-        //FLBurger fLBurger = (FLBurger)burgerList.ItemsSource;
-        //App.FLBurgerRepo.
-        //App.FLBurgerRepo.DeleteItem(fLBurger);
-        //Shell.Current.GoToAsync(FLBurgerItemPage);
+
+        /*string previous = (e.PreviousSelection.FirstOrDefault() as FLBurger)?.Name;
+        string current = (e.CurrentSelection.FirstOrDefault() as FLBurger)?.Name;
+        var resp = new Dictionary<string, object>();
+        resp.Add("flBurger", FLBurger);
+        Shell.Current.GoToAsync(nameof(FLBurgerItemPage), resp);
+        FLBurger fLBurger = (FLBurger)burgerList.ItemsSource;
+        App.FLBurgerRepo.
+        App.FLBurgerRepo.DeleteItem(fLBurger);
+        Shell.Current.GoToAsync(FLBurgerItemPage);*/
     }
 }

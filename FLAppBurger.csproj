@@ -54,6 +54,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ViewModels\AddUpdatePageViewModels.xaml.cs">
+	    <DependentUpon>AddUpdatePageViewModels.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="ViewModels\AddUpdatePageViewModels.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\FLBurgerItemPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
