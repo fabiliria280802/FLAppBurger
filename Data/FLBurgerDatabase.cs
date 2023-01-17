@@ -45,6 +45,9 @@ namespace FLAppBurger.Data
         }
         public FLBurger ShowItem(FLBurger item)
         {
+            Init();
+            List<FLBurger> burgers = conn.Table<FLBurger>().ToList();
+            //foreach item in burgers():
             return null;
             //aqui falta codigo que recorra la lista en busca de  los datos de una determinada hamburgesa
         }

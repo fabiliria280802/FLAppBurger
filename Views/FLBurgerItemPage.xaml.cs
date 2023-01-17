@@ -40,5 +40,6 @@ public partial class FLBurgerItemPage : ContentPage
     private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         // _flag = e.Value;
+
     }
 }
