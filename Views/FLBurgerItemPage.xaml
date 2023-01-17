@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:FLAppBurger.Models"
+             xmlns:viewmodels="clr-namespace:FLAppBurger.ViewModels"
              x:Class="FLAppBurger.Views.FLBurgerItemPage"
              Title="FLBurgerItemPage">
     <ScrollView>
         <VerticalStackLayout Padding="20"
-            Spacing="10"
-            VerticalOptions="StartAndExpand">
+                             Spacing="10"
+                             VerticalOptions="StartAndExpand">
             <Label Text="Nombre" />
             <Entry x:Name="nameB" Text="{Binding Name}" />
             <Label Text="Descripción" />
@@ -16,15 +17,15 @@
             <!--
             Ya no se usa el checkbox de esta manera
             <CheckBox x:Name="check"
-                CheckedChanged="OnCheckBoxCheckedChanged" />
+            CheckedChanged="OnCheckBoxCheckedChanged" />
             -->
             <CheckBox IsChecked="{Binding WithExtraCheese}"/>
             <Button Text="Guardar"
-                Clicked="OnSaveClicked" />
+                    Clicked="OnSaveClicked" />
             <Button Text="Cancelar"
-                Clicked="OnCancelClicked" />
+                    Clicked="OnCancelClicked" />
             <Button Text="Borrar"
-                Clicked="OnDeleteClicked" />
+                    Clicked="OnDeleteClicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

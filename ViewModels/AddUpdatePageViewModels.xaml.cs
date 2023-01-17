@@ -2,8 +2,8 @@ namespace FLAppBurger.ViewModels;
 
 public partial class AddUpdatePageViewModels : ContentPage
 {
-	public AddUpdatePageViewModels()
-	{
-		InitializeComponent();
-	}
+    public AddUpdatePageViewModels()
+    {
+        InitializeComponent();
+    }
 }
