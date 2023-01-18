@@ -17,6 +17,8 @@ public partial class FLBurgerItemPage : ContentPage
     public FLBurgerItemPage()
     {
         InitializeComponent();
+        DateTime thisday = DateTime.Now;
+        descC.Text = thisday.ToString();
         //BindingContext = Item;
     }
     private void OnSaveClicked(object sender, EventArgs e)
@@ -42,4 +44,5 @@ public partial class FLBurgerItemPage : ContentPage
         // _flag = e.Value;
 
     }
+
 }

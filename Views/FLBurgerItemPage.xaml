@@ -10,9 +10,11 @@
                              Spacing="10"
                              VerticalOptions="StartAndExpand">
             <Label Text="Nombre" />
-            <Entry x:Name="nameB" Text="{Binding Name}" />
+            <Entry x:Name="nameB" 
+                   Text="{Binding Name}" />
             <Label Text="Descripción" />
-            <Entry x:Name="descB" Text="{Binding Description}" />
+            <Entry x:Name="descB" 
+                   Text="{Binding Description}" />
             <Label Text="¿Con queso extra?" />
             <!--
             Ya no se usa el checkbox de esta manera
@@ -20,6 +22,18 @@
             CheckedChanged="OnCheckBoxCheckedChanged" />
             -->
             <CheckBox IsChecked="{Binding WithExtraCheese}"/>
+            <Label Text="Fecha de creación con code:" />
+            <Label x:Name="descC" />
+            <Label Text="Fecha de creación con xaml:" />
+            <Label x:Name="descD" 
+                   Text='d/M/YYYY HH:mm'/>
+            <Label Text="Fecha de creación con code en viewModels:" />
+            <Label x:Name="descE" 
+                   Text="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}">
+                <Label.BindingContext>
+                    <local.FLDateViewModel/>
+                </Label.BindingContext>
+            </Label>
             <Button Text="Guardar"
                     Clicked="OnSaveClicked" />
             <Button Text="Cancelar"

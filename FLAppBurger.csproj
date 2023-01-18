@@ -54,13 +54,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="ViewModels\AddUpdatePageViewModels.xaml.cs">
-	    <DependentUpon>AddUpdatePageViewModels.xaml</DependentUpon>
+	  <Compile Update="ViewModels\FLDateViewModel.xaml.cs">
+	    <DependentUpon>FLDateViewModel.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ViewModels\AddUpdatePageViewModels.xaml">
+	  <MauiXaml Update="ViewModels\FLDateViewModel.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\FLBurgerItemPage.xaml">
