@@ -46,7 +46,16 @@ public partial class FLBurgerListPage : ContentPage
     private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         //Aqui falta codigo que tome el item seleccionado y lo pase a la pagina FLBurgerItemPage
+        FLBurger burgers = e.CurrentSelection.FirstOrDefault() as FLBurger;
+        if (burgers == null)
+            return;
+        Shell.Current.GoToAsync(nameof(FLBurgerItemPage), true, new Dictionary<string, object>
+        {
+            {"Item", burgers }
+        });
+        ((CollectionView)sender).SelectedItem = null;
 
+        //Intentos de implementacion con viewmodels
         /*string previous = (e.PreviousSelection.FirstOrDefault() as FLBurger)?.Name;
         string current = (e.CurrentSelection.FirstOrDefault() as FLBurger)?.Name;
         var resp = new Dictionary<string, object>();
